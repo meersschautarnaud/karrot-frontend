@@ -7,10 +7,14 @@
         </q-item-main>
         <q-item-side right class="group">
           <router-link :to="{name: 'storeEdit', params: { storeId: store.id }}">
-            <q-btn small round color="secondary" icon="fa-pencil" />
+            <q-btn small round color="secondary" icon="fa-pencil">
+              <q-tooltip v-t="'STOREDETAIL.EDIT'" />
+            </q-btn>
           </router-link>
           <router-link :to="{name: 'storePickupsManage', params: { storeId: store.id }}">
-            <q-btn small round color="secondary" icon="fa-clock-o" />
+            <q-btn small round color="secondary" icon="fa-clock-o">
+              <q-tooltip v-t="'STOREDETAIL.MANAGE'" />
+            </q-btn>
           </router-link>
         </q-item-side>
       </q-item>
@@ -43,10 +47,10 @@ import {
   mapActions,
 } from 'vuex'
 
-import { QCard, QCardTitle, QCardActions, QItem, QItemMain, QItemSide, QBtn, QTabs, QRouteTab, QIcon } from 'quasar'
+import { QCard, QCardTitle, QCardActions, QItem, QItemMain, QItemSide, QBtn, QTabs, QRouteTab, QIcon, QTooltip } from 'quasar'
 
 export default {
-  components: { PickupList, QCard, QCardTitle, QCardActions, QItem, QItemMain, QItemSide, QBtn, QTabs, QRouteTab, QIcon, KNotice, Markdown },
+  components: { PickupList, QCard, QCardTitle, QCardActions, QItem, QItemMain, QItemSide, QBtn, QTabs, QRouteTab, QIcon, QTooltip, KNotice, Markdown },
   methods: {
     ...mapActions({
       join: 'pickups/join',
