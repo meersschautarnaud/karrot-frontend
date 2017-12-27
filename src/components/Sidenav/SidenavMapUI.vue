@@ -1,7 +1,7 @@
 <template>
   <SidenavBox>
     <template slot="icon">
-      <q-icon name="fa-map" />
+      <q-icon name="fa-fw fa-map" />
     </template>
     <div slot="tools" class="tools">
       <q-btn flat small round @click="$emit('toggleStores')">
